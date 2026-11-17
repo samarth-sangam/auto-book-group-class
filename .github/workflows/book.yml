@@ -9,12 +9,13 @@ on:
 jobs:
   book:
     runs-on: ubuntu-latest
+    environment: prod
     steps:
+      # Kept lean on purpose: ubuntu-latest already ships Go, so no setup-go,
+      # and tests live in test.yml instead of delaying every booking.
       - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
         with:
-          go-version-file: go.mod
-      - run: go test ./...
+          fetch-depth: 1
       - run: go run ./cmd/booker
         env:
           CULT_COOKIE: ${{ secrets.CULT_COOKIE }}

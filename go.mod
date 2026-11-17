@@ -1,3 +1,3 @@
 module github.com/samarthsangam/auto-book-group-class
 
-go 1.27.4
+go 1.22
