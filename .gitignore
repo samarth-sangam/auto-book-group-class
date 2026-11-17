@@ -1,0 +1,4 @@
+.env
+/booker
+.claude/
+.mcp.json

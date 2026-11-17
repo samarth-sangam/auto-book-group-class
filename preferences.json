@@ -1,0 +1,13 @@
+{
+  "centerId": "143",
+  "daysAhead": 4,
+  "classes": [
+    { "weekday": "Monday",    "time": "08:00", "workout": "Strength" },
+    { "weekday": "Tuesday",   "time": "06:00", "workout": "Strength" },
+    { "weekday": "Wednesday", "time": "07:00", "workout": "Strength" },
+    { "weekday": "Thursday",  "time": "06:00", "workout": "Strength" },
+    { "weekday": "Friday",    "time": "07:00", "workout": "Strength" },
+    { "weekday": "Saturday",  "time": "07:00", "workout": "Strength" },
+    { "weekday": "Sunday",    "time": "07:00", "workout": "Strength" }
+  ]
+}
