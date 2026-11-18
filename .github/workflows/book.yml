@@ -7,12 +7,23 @@ on:
   workflow_dispatch: # lets you run it manually from the Actions tab
 
 jobs:
-  book:
+  book_1:
     runs-on: ubuntu-latest
-    environment: prod
+    environment: prod_1
     steps:
       # Kept lean on purpose: ubuntu-latest already ships Go, so no setup-go,
       # and tests live in test.yml instead of delaying every booking.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - run: go run ./cmd/booker
+        env:
+          CULT_COOKIE: ${{ secrets.CULT_COOKIE }}
+          CULT_API_KEY: ${{ secrets.CULT_API_KEY }}
+  book_2:
+    runs-on: ubuntu-latest
+    environment: prod_2
+    steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
