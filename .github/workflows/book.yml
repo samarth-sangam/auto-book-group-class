@@ -6,6 +6,9 @@ on:
     - cron: "30 16 * * *"
   workflow_dispatch: # lets you run it manually from the Actions tab
 
+permissions:
+  contents: read
+
 jobs:
   book_1:
     runs-on: ubuntu-latest
